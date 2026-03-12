@@ -1,0 +1,28 @@
+from pathlib import Path
+
+# Paths
+PROJECT_ROOT = Path(__file__).parent
+DATA_DIR = PROJECT_ROOT / "data"
+MODEL_DIR = PROJECT_ROOT / "models"
+RESULTS_DIR = PROJECT_ROOT / "results"
+
+# Dataset
+HF_DATASET = "tumeteor/Security-TTP-Mapping"
+TOP_K_TECHNIQUES = 50
+TEST_SIZE = 0.15
+VAL_SIZE = 0.15
+RANDOM_SEED = 42
+
+# TF-IDF baseline
+TFIDF_MAX_FEATURES = 30000
+TFIDF_NGRAM_RANGE = (1, 3)
+
+# BERT fine-tuning
+BERT_MODEL_NAME = "bert-base-uncased"
+MAX_SEQ_LENGTH = 256
+TRAIN_BATCH_SIZE = 16
+EVAL_BATCH_SIZE = 32
+LEARNING_RATE = 2e-5
+NUM_EPOCHS = 5
+WARMUP_RATIO = 0.1
+WEIGHT_DECAY = 0.01
